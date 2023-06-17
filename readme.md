@@ -1,7 +1,7 @@
-# Output
+# Operator
 
-- Console
-- Document write 
-- Get element by ID
+- Arithmetic 
+- Assignment
+- HW
 
 Thanks.
