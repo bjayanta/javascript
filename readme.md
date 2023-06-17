@@ -1,4 +1,4 @@
-# Variable
+# Output
 
 - Syntax
 - Nameing convention 
