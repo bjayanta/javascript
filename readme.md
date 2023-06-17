@@ -1,8 +1,7 @@
 # Output
 
-- Syntax
-- Nameing convention 
-- Example
-- HW
+- Console
+- Document write 
+- Get element by ID
 
 Thanks.
