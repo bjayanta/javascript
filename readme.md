@@ -2,6 +2,7 @@
 
 - Arithmetic 
 - Assignment
+- Comparison
 - HW
 
 Thanks.

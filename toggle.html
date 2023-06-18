@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+</head>
+<body>
+    
+    <button onclick="toggle()">
+        Click me
+        <span id="span"></span>
+    </button>
+
+    <div style="width: 100px; height: 100px;border: 1px solid;" id="box"></div>
+
+    <script>
+        const span = document.getElementById("span");
+        const box = document.getElementById("box");
+
+        var counter = false;
+
+        function toggle() {
+            // counter
+            span.innerHTML = counter ? "Yes" : "No";
+            counter = !counter;
+
+            // color change 
+            box.style.backgroundColor = counter ? "red" : "green";
+        }
+
+    </script>
+
+</body>
+</html>
