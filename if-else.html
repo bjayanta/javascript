@@ -9,13 +9,18 @@
 
     <script>
         // IF
-        // if (condition) { body }
+        // if (condition) { True body } else { False body }
 
         const age = 15;
 
         if(age >= 18) {
             console.log("Bia korar age hoise.");
+        } else {
+            console.log("Boyos hoi nai. Pore aso.");
         }
+
+        const msg = (age >= 18) ? "Bia korar age hoise" : "Boyos hoi nai. Pore aso.";
+        console.log(msg);
     </script>
 </body>
 </html>

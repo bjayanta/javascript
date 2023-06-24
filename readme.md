@@ -1,19 +1,14 @@
-# Function
+# Conditional Statement
 
-- Defination
-
-    A set of code instruction that a computer can understand to solve a problem and produce a desired result.
-
+- Basic
 - Classification
-
-    - Built-in 
-    - User define
-
-- Scope
-- Arrow function
+    - If
+    - If Else
+    - If Else If
+    - Nested If Else
 - Example
 - HW
-    - Math calculator
-    - Age calculator
+    - GPA calculation
+    - Day wise message show
 
 Thanks.
