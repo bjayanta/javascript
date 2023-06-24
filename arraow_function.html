@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+
+    <script>
+        
+        const display = () => console.log("I am display function.");
+        const sum = (a, b) => console.log(a + b);
+        const mySum = (a, b) => {
+            const r = a + b;
+            console.log(`The sum of ${a} and ${b} = ${r}`);
+        }
+
+        // Call
+        display();
+        sum(10, 15);
+        mySum(110, 150);
+
+    </script>
+</body>
+</html>

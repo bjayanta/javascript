@@ -3,48 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operator</title>
+    <title>Function</title>
 </head>
 <body>
 
     <script>
-        // Arithmetic
-        // console.log(5**2); // Exponentiation
-        // console.log(5/2); // Devision
-        // console.log(5%2); // Modulus (Division Remainder)
-
-        // Increment
-        var a = 5;
-        a++; // a = a + 1;
-        // ++a; // a = a + 1;
-        // console.log(a); 
-
-        // Assignment
-        a = 5;
-        a += 3; // a = a + 3;
-        // console.log(a);
-
-        // Comparison Operators
-        // console.log(5 == 5);
-        // console.log(5 == 6);
-        // console.log(5 != 5);
-        // console.log(5 != 6);
-
-        // console.log(5 == '5'); // true
-        // console.log(5 === '5'); // false
-        // console.log(5 != '5'); // false
-        // console.log(5 !== '5'); // true
-
-        // console.log(5 > 10);
-        // console.log(5 < 10);
-        // console.log(5 >= 5);
-        // console.log(5 <= 5);
-
-        // condition ? True : False
-        var x = 5 > 10 ? "Yes" : "No";
-        console.log(x);
-
         
+        // function sum() {
+        //     var num1 = 10,
+        //         num2 = 30,
+        //         result = num1 + num2;
+
+        //     console.log(`The sum of ${num1} and ${num2} = ${result}.`);
+        // }
+
+        // function sum(num1, num2) {
+        //     var result = num1 + num2;
+        //     console.log(`The sum of ${num1} and ${num2} = ${result}.`);
+        // }
+
+        // // call
+        // const num1 = 100;
+        // const num2 = 200;
+        // sum(num1, num2);
+
+        // Scope
+        // var age = 120;
+        // function robinKSizeKoreFalen() {
+        //     age = 55;
+        //     console.log(`Robin er age holo ${age} years.`);
+        // }
+
+        // console.log(age); // 120
+        // robinKSizeKoreFalen();
+        // console.log(age); // 55
+
+        var age = 120;
+        function robinKSizeKoreFalen() {
+            var age = 55;
+            console.log(`Robin er age holo ${age} years.`);
+        }
+
+        robinKSizeKoreFalen();
+        console.log(age);
+
     </script>
 </body>
 </html>

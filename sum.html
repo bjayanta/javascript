@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Programm</title>
+</head>
+<body>
+
+    <div>
+        <input type="number" id="num1" />
+        <input type="number" id="num2" />
+        <button type="button" onclick="sum()">+</button>
+    </div>
+
+    <script>
+        // Get all the target
+        const num1 = document.getElementById("num1");
+        const num2 = document.getElementById("num2");
+        
+        // Function 
+        function sum() {
+            var result = Number(num1.value) + Number(num2.value);
+
+            console.log(`The sum of ${num1.value} + ${num2.value} = ${result}`);
+        }
+    </script>
+</body>
+</html>
