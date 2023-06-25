@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loop Control Statement</title>
+    <title>Array</title>
 </head>
 <body>
 
     <script>
-        // For loop
-        // for (initialization; condition; increment/decrement) {
-        //     // code block to be executed
-        //     // Body of the loop
-        // }
+        // Array
+        // var students = []; // empty array
+        var students = [
+            "Sourov", 
+            "JB", 
+            "Iqbal", 
+            "Robin", 
+            "Turjoy", 
+            "Shimanto", 
+            "Khalil", 
+            "Sagor"
+        ];
 
-        for (var i = 0; i < 10; i++) {
-            console.log("I eat rice.");
-            document.write(`<p>${i}. I eat rice.</p>`);
-        }
+        console.log(students);
+        console.log(students[4]);
+
+        // Push
+        students.push("Lohan");
+        console.log(students);
     </script>
 </body>
 </html>
