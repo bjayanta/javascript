@@ -1,14 +1,14 @@
-# Conditional Statement
+# Loop
 
 - Basic
 - Classification
-    - If
-    - If Else
-    - If Else If
-    - Nested If Else
+    - Entry control loop
+        - For
+        - While
+    - Exit control loop
+        - Do While
 - Example
 - HW
-    - GPA calculation
-    - Day wise message show
+    - Piramid
 
 Thanks.
