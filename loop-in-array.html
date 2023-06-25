@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array + Loop</title>
+</head>
+<body>
+
+    <script>
+        // Array
+        var students = [
+            "Sourov", 
+            "JB", 
+            "Iqbal", 
+            "Robin", 
+            "Turjoy", 
+            "Shimanto", 
+            "Khalil", 
+            "Sagor"
+        ];
+
+        // for in
+        // for (const turjoy in students) {
+        //     console.log(students[turjoy]);
+        //     document.write(`<h2>${turjoy} - ${students[turjoy]}</h2>`)
+        // }
+
+        // for each
+        // students.forEach((student, i) => {
+        //     document.write(`<h2>${i} - ${student}</h2>`)
+        // });
+
+        // map
+        students.map((person, i) => {
+            document.write(`<h2>${i} - ${person}</h2>`)
+        })
+
+    </script>
+</body>
+</html>
