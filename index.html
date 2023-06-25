@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loop Control Statement</title>
+    <title>Todo project</title>
 </head>
 <body>
 
-    <script>
-        // For loop
-        // for (initialization; condition; increment/decrement) {
-        //     // code block to be executed
-        //     // Body of the loop
-        // }
+    <div>
+        <input type="text" id="task" />
+        <button type="button" onclick="todo()">Add</button>
+    </div>
 
-        for (var i = 0; i < 10; i++) {
-            console.log("I eat rice.");
-            document.write(`<p>${i}. I eat rice.</p>`);
-        }
-    </script>
+    <ul id="list">
+        <li>
+            <span>Task 1</span>
+            <button type="button">Ok</button>
+            <button type="button">Delete</button>
+        </li>
+
+        <li>
+            <span>Task 2</span>
+            <button type="button">Ok</button>
+            <button type="button">Delete</button>
+        </li>
+
+        <li>
+            <span>Task 3</span>
+            <button type="button">Ok</button>
+            <button type="button">Delete</button>
+        </li>
+    </ul>
+
+    <script src="./app.js"></script>
+
 </body>
 </html>
