@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+</head>
+<body>
+
+    <h2>This is about page.</h2>
+    <p id="search"></p>
+
+    <button onclick="history.back()">Back</button>
+
+    <script>
+        const p = document.getElementById("search");
+        const query = window.location.search.replace('?', '');
+
+        console.log(query); // string
+
+        // console.log(window.location);
+        // console.log(window.location.search);
+
+        const search = query.split('&')
+        console.log(search); // array
+
+        search.push("height=100ft")
+        search.splice(1, 1)
+
+        p.innerHTML = search.join("<br/>")
+
+        console.log(window.history);
+    </script>
+    
+
+</body>
+</html>

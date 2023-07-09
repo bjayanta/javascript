@@ -3,37 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle project</title>
-
-    <style>
-        .box {
-            width: 100px;
-            height: 100px;
-            border: 2px solid black;
-        }
-    </style>
+    <title>Window Location</title>
 </head>
 <body>
 
-    <div class="box"></div>
-    <br>
-
-    <button onclick="toggleColor('red')">Change color to red</button>
-    <button onclick="toggleColor('blue')">Change color to blue</button>
-    <button onclick="toggleColor('yellow')">Change color to yellow</button>
-    <button onclick="toggleColor('black')">Change color to black</button>
-    <button onclick="toggleColor('green')">Change color to green</button>
-    <!-- <button>Change color</button> -->
+    <!-- <a href="about.html">About</a> -->
+    <button type="button" onclick="gotoAboutPage()">About page</button>
 
     <script>
-        const box = document.getElementsByClassName("box");
+        console.log(window);
 
-        // const btn = document.getElementsByTagName("button");
-        // btn[0].addEventListener("click", toggleColor);
-
-        function toggleColor(color) {
-            console.log(color);
-            box[0].style.backgroundColor = color;
+        function gotoAboutPage() {
+            console.log(1);
+            window.location = "/about.html?name=Sohel&ag?e=120"
         }
     </script>
 
