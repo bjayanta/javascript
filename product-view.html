@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle project</title>
+    <title>Project</title>
 
     <style>
         .box {
@@ -18,18 +18,24 @@
     <div class="box"></div>
     <br>
 
-    <button onclick="toggleColor('red')">Change color to red</button>
-    <button onclick="toggleColor('blue')">Change color to blue</button>
-    <button onclick="toggleColor('yellow')">Change color to yellow</button>
-    <button onclick="toggleColor('black')">Change color to black</button>
-    <button onclick="toggleColor('green')">Change color to green</button>
-    <!-- <button>Change color</button> -->
+    <!-- All color buttons -->
+    <div id="buttons"></div>
 
     <script>
-        const box = document.getElementsByClassName("box");
+        const colors = ["Red", "Green", "Blue", "Black", "Yellow"];
 
-        // const btn = document.getElementsByTagName("button");
-        // btn[0].addEventListener("click", toggleColor);
+        const box = document.getElementsByClassName("box");
+        const buttons = document.getElementById("buttons");
+
+        var el = '';
+
+        colors.forEach(color => {
+            el += `
+                <button onclick="toggleColor('${color}')">Change color to ${color}</button>
+            `
+        });
+
+        buttons.innerHTML = el;
 
         function toggleColor(color) {
             console.log(color);

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="" id="img" alt="Product image" />
+    <br>
+
+    <!-- All color buttons -->
+    <div id="buttons"></div>
+
+    <script>
+        const photos = ["01.png", "02.jpg", "03.jpg", "04.png", "05.jpg"];
+
+        const img = document.getElementById("img");
+        const buttons = document.getElementById("buttons");
+
+        var el = '';
+
+        photos.forEach(photo => {
+            el += `
+                <button onclick="switchPhoto('${photo}')">Change color to ${photo}</button>
+            `
+        });
+
+        buttons.innerHTML = el;
+
+        function switchPhoto(photo) {
+            img.src = '/images/' + photo;
+        }
+    </script>
+
+</body>
+</html>
