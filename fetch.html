@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+
+    
+
+    <script>
+        
+        async function getStudents () {
+            const data = await fetch('http://127.0.0.1:5500/data.json')
+            const response = await data.json()
+
+            console.log(response);
+        }
+
+        getStudents();
+
+        // const students = async () => {
+        //     const data = await fetch('http://127.0.0.1:5500/data.json')
+        //     return data.json()
+        // }
+
+        // console.log(students());
+        
+
+    </script>
+
+</body>
+</html>

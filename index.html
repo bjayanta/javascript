@@ -3,20 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Window Location</title>
+    <title>Object</title>
 </head>
 <body>
 
-    <!-- <a href="about.html">About</a> -->
-    <button type="button" onclick="gotoAboutPage()">About page</button>
+    <table border="1" style="width:100%;text-align:left;">
+        <thead>
+            <tr>
+                <th>SL</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="4">Total amount:</th>
+                <th id="total">0.00</th>
+            </tr>
+        </tfoot>
+    </table>
 
     <script>
-        console.log(window);
+        // Get tag
+        const tbody = document.getElementsByTagName("tbody")[0];
+        const totalTh = document.getElementById("total");
 
-        function gotoAboutPage() {
-            console.log(1);
-            window.location = "/about.html?name=Sohel&ag?e=120"
-        }
+        let data = [];
+        let total = 0;
+
+        const students = [
+            {name: "Sourov", age: 50, phone: "01763015198", balance: 500.00},
+            {name: "Jayanta", age: 12, phone: "01775219457", balance: 480.00},
+            {name: "Turjoy", age: 70, phone: "01903402828", balance: 1000.00},
+            {name: "Sohel", age: 5, phone: "01558563695", balance: 960.00},
+            {name: "Saikat", age: 98, phone: "016893562", balance: 1200.00},
+            {name: "Iqbal", age: 50, phone: "01763015188", balance: 100.00},
+            {name: "Ananda", age: 12, phone: "01775219458", balance: 50.00},
+            {name: "Sagor", age: 70, phone: "01903402826", balance: 350.00},
+            {name: "Robin", age: 65, phone: "01558563694", balance: 20.00},
+            {name: "Khalil", age: 82, phone: "016893563", balance: 750.00},
+        ]
+
+        students.map((row, i) => {
+            // count total
+            total += row.balance;
+
+            // set tr
+            data.push(`
+                <tr>
+                    <td>${i+1}</td>
+                    <td>${row.name}</td>
+                    <td>${row.age}</td>
+                    <td>${row.phone}</td>
+                    <td>${row.balance}</td>
+                </tr>
+            `)
+        })
+
+        tbody.innerHTML = data.join("");
+        totalTh.innerHTML = total;
     </script>
 
 </body>

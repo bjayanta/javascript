@@ -1,0 +1,12 @@
+[
+    { "name":"Sourov", "age":50, "phone":"01763015198", "balance":500.00 },
+    { "name":"Jayanta", "age":12, "phone":"01775219457", "balance":480.00 },
+    { "name":"Turjoy", "age":70, "phone":"01903402828", "balance":1000.00 },
+    { "name":"Sohel", "age":5, "phone":"01558563695", "balance":960.00 },
+    { "name":"Saikat", "age":98, "phone":"016893562", "balance":1200.00 },
+    { "name":"Iqbal", "age":50, "phone":"01763015188", "balance":100.00 },
+    { "name":"Ananda", "age":12, "phone":"01775219458", "balance":50.00 },
+    { "name":"Sagor", "age":70, "phone":"01903402826", "balance":350.00 },
+    { "name":"Robin", "age":65, "phone":"01558563694", "balance":20.00 },
+    { "name":"Khalil", "age":82, "phone":"016893563", "balance":750.00 }
+ ]
