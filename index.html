@@ -7,6 +7,16 @@
 </head>
 <body>
 
+    <!-- <div>
+        <input type="tel" id="phone">
+        <button onclick="searchByPhone()">Search</button>
+    </div> -->
+
+    <div>
+        <input type="number" id="balance" onkeyup="searchByBalance()" />
+        <button onclick="searchByBalance()">Search</button>
+    </div>
+
     <table border="1" style="width:100%;text-align:left;">
         <thead>
             <tr>
@@ -33,9 +43,6 @@
         const tbody = document.getElementsByTagName("tbody")[0];
         const totalTh = document.getElementById("total");
 
-        let data = [];
-        let total = 0;
-
         const students = [
             {name: "Sourov", age: 50, phone: "01763015198", balance: 500.00},
             {name: "Jayanta", age: 12, phone: "01775219457", balance: 480.00},
@@ -49,24 +56,48 @@
             {name: "Khalil", age: 82, phone: "016893563", balance: 750.00},
         ]
 
-        students.map((row, i) => {
-            // count total
-            total += row.balance;
+        let copyOfStudents = [...students]
 
-            // set tr
-            data.push(`
-                <tr>
-                    <td>${i+1}</td>
-                    <td>${row.name}</td>
-                    <td>${row.age}</td>
-                    <td>${row.phone}</td>
-                    <td>${row.balance}</td>
-                </tr>
-            `)
-        })
+        function searchByPhone() {
+            const phone = document.getElementById("phone")
+            copyOfStudents = students.filter((student) => student.phone === phone.value)
 
-        tbody.innerHTML = data.join("");
-        totalTh.innerHTML = total;
+            insertStudents();
+        }
+
+        function searchByBalance() {
+            const balance = document.getElementById("balance")
+            copyOfStudents = students.filter((student) => student.balance > balance.value)
+
+            // console.log(students);
+            insertStudents();
+        }
+
+        function insertStudents() {
+            let data = [];
+            let total = 0;
+
+            copyOfStudents.map((row, i) => {
+                // count total
+                total += row.balance;
+
+                // set tr
+                data.push(`
+                    <tr>
+                        <td>${i+1}</td>
+                        <td>${row.name}</td>
+                        <td>${row.age}</td>
+                        <td>${row.phone}</td>
+                        <td>${row.balance}</td>
+                    </tr>
+                `)
+            })
+
+            tbody.innerHTML = data.join("");
+            totalTh.innerHTML = total;
+        }
+        
+        insertStudents()
     </script>
 
 </body>

@@ -23,7 +23,9 @@
             response.map((article, i) => {
                 articles.push(`
                     <div>
-                        <h2>${article.title}</h2>
+                        <a href="single-post.html?id=${article.id}" target="_blank">
+                            <h2>${article.title}</h2>
+                        </a>
                         <p>${article.body}</p>   
                     </div>
                 `)
